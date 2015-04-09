@@ -11,3 +11,5 @@ Intro to Angular
 - order by options
 - filter by
 
+
+run nodemon -e js,html server.js 
