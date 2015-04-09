@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>My HTML File</title>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/controllers.js"></script>
+  <script src="/scripts/services.js"></script>
+</head>
+<body>
+
+
+<div class="container" ng-controller="DemoController">
+	<div class="row">
+		<table class="table table-striped table-condensed table-hover">
+		  <tr>
+		  	<th>name</th>
+		  	<th>word</th>
+		  </tr>
+
+		  <tr ng-repeat="person in people">
+		  	<td>{{ person.name }}</td>
+		  	<td>{{ person.word }}</td>
+		  </tr>
+		</table>
+	</div>
+</div>
+
+
+</body>
+</html>
