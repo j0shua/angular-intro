@@ -1,34 +1,48 @@
 <!doctype html>
 <html lang="en" ng-app="app">
 <head>
-  <meta charset="utf-8">
-  <title>My HTML File</title>
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+	<meta charset="utf-8">
+	<title>My HTML File</title>
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
 
-  <script src="/bower_components/angular/angular.js"></script>
-  <script src="/scripts/http/app.js"></script>
-  <script src="/scripts/http/controllers.js"></script>
-  <script src="/scripts/http/services.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/scripts/http/app.js"></script>
+	<script src="/scripts/http/controllers.js"></script>
+	<script src="/scripts/http/services.js"></script>
 </head>
 <body>
 
 
-<div class="container" ng-controller="DemoController">
-	<div class="row">
-		<table class="table table-striped table-condensed table-hover">
-		  <tr>
-		  	<th>name</th>
-		  	<th>word</th>
-		  </tr>
+	<div class="container" ng-controller="DemoController">
+		<div class="row">
+			<table class="table table-striped table-condensed table-hover">
+				<tr>
+					<th>name</th>
+					<th>word</th>
+				</tr>
 
-		  <tr ng-repeat="person in people">
-		  	<td>{{ person.name }}</td>
-		  	<td>{{ person.word }}</td>
-		  </tr>
-		</table>
-	</div>
-</div>
+				<tr ng-repeat="person in people">
+					<td>{{ person.name }}</td>
+					<td>{{ person.word }}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="row">
+			<form class="form-inline">
+				<div class="form-group">
+					<label class="sr-only" for="name">name</label>
+					<input ng-model="newPerson.name" type="text" class="form-control" id="name" placeholder="name">
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="word">word</label>
+					<input ng-model="newPerson.word" type="text" class="form-control" id="word" placeholder="word">
+				</div>
+				<button ng-click="addPerson(newPerson.name, newPerson.word)" class="btn btn-primary">add person</button>
+			</form>
+
+		</div>
 
 
-</body>
-</html>
+	</body>
+	</html>
