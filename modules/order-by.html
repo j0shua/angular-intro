@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>My HTML File</title>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+  <script src="/bower_components/angular/angular.js"></script>
+</head>
+<body>
+
+<script>
+var people = [
+	{'name': 'josh', 'word': 'awesome'}, 
+	{'name': 'vanessa', 'word': 'phenominal'},
+	{'name': 'jp', 'word': 'jpjpjppjpjpj'},
+	{'name': 'anton', 'word': 'anton anton anton'},
+	{'name': 'garreth', 'word': 'garreth garreth garreth'},
+	{'name': 'paul', 'word': 'paul paul paul'},
+	{'name': 'stan', 'word': 'stan stan stan'},
+	{'name': 'santiago', 'word': 'santiago santiago'},
+	{'name': 'tomas', 'word': 'tomas'},
+	{'name': 'ramiro', 'word': 'ramiro ramiro'},
+	{'name': 'julieta', 'word': 'julieta julieta'}
+];
+</script>
+
+<script>
+	angular.module('app', [])
+	.controller('DemoController', function($scope){
+		$scope.people = people;
+	})
+</script>
+
+
+<div class="container" ng-controller="DemoController">
+	<div class="row">
+		<table class="table table-striped table-condensed table-hover">
+		  <tr>
+		  	<th>name</th>
+		  	<th>word</th>
+		  </tr>
+
+		<!-- -- try these
+		orderBy name
+		descending? orderBy: '-name'
+
+		orderBy word
+		orderBy 'word'
+		-->
+		  <tr ng-repeat="person in people | orderBy:'name'">
+		  	<td>{{ person.name }}</td>
+		  	<td>{{ person.word }}</td>
+		  </tr>
+		</table>
+	</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>My HTML File</title>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+  <script src="/bower_components/angular/angular.js"></script>
+</head>
+<body>
+
+<script>
+	angular.module('app', [])
+	.controller('DemoController', function($scope){
+		$scope.searchField = 'josh is awesome';
+	})
+</script>
+
+
+<div class="container" ng-controller="DemoController">
+	<div class="row">
+
+		<div class="well">
+			<!-- -- interpolate here -->
+		</div>
+
+		<div class="col-lg-6">
+		    <div class="input-group">
+		      <!-- -- need to add ng-model -->
+		      <input type="search" class="form-control" placeholder="Search for...">
+		    </div>
+	  	</div>
+	</div>
+</div>
+
+
+</body>
+</html>
