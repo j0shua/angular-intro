@@ -1,10 +1,8 @@
-var express = require('express');
-var app = express();
+'use strict';
 
-app.use(express.static(__dirname));
-
-app.get('/people', function(req, res) {
-  var people = [
+angular.module('app')
+	.factory('PeopleService', function($timeout, $q){
+		var people = [
 			{'name': 'josh', 'word': 'awesome'}, 
 			{'name': 'vanessa', 'word': 'phenominal'},
 			{'name': 'jp', 'word': 'jpjpjppjpjpj'},
@@ -18,10 +16,19 @@ app.get('/people', function(req, res) {
 			{'name': 'julieta', 'word': 'julieta julieta'}
 		];
 
+		function getAll(){
+			var defer = $q.defer();
 
-  res.send(people);
-});
+			$timeout(function(){
+				defer.resolve(people);
 
-app.listen(8888, function(){
-  console.log('app listening on port 8888');
-});
+			}, 3000);
+
+			return defer.promise;
+		}
+
+
+		return {
+			getAll: getAll
+		};
+	})
