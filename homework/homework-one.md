@@ -18,7 +18,7 @@ NOTE: Instructions may be out of order / not make sense in a section so read thr
 ### Create Advertiser-list page
 1. One of the links in the 'top level nav' should be 'advertisers'. Clicking on the link should send the user to a page with a list of advertisers in a table.
 
-	- Specifically: the link should show the word "advertisers" and clicking it should take the user to '/advertisers' which will be a list in a table of all the advertisers.
+	- Specifically: the link should show the word "advertisers" and clicking it should take the user to '/advertisers' which will be a list -- in a table -- of all the advertisers.
 
 	- This involves creating view/controller/service to support the page.
 
