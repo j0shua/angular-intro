@@ -22,7 +22,7 @@ angular.module('app')
 			$timeout(function(){
 				defer.resolve(people);
 
-			}, 3000);
+			}, 1000);
 
 			return defer.promise;
 		}

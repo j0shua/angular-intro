@@ -10,11 +10,11 @@
 
 <script>
 var people = [
-	{'name': 'josh', 'word': 'awesome'}, 
-	{'name': 'vanessa', 'word': 'phenominal'},
-	{'name': 'jp', 'word': 'jpjpjppjpjpj'},
-	{'name': 'anton', 'word': 'anton anton anton'},
-	{'name': 'garreth', 'word': 'garreth garreth garreth'},
+	{'num': '123', 'name': 'josh', 'word': 'awesome'}, 
+	{'num': '123', 'name': 'vanessa', 'word': 'phenominal'},
+	{'num': '123', 'name': 'jp', 'word': 'jpjpjppjpjpj'},
+	{'num': '123', 'name': 'anton', 'word': 'anton anton anton'},
+	{'num': '123', 'name': 'garreth', 'word': 'garreth garreth garreth'},
 	{'name': 'paul', 'word': 'paul paul paul'},
 	{'name': 'stan', 'word': 'stan stan stan'},
 	{'name': 'santiago', 'word': 'santiago santiago'},
@@ -47,7 +47,7 @@ var people = [
 	      		<div class="col-lg-6">
       				<select 
       					ng-model="orderBy" 
-      					ng-options="option.value as option.label for option in orderByOptions">
+      					ng-options="option.value as option.label for option in orderByOptions track by option.value">
 						<option value=""> select a sort order</option>
 					</select>
 	      		</div>
@@ -58,11 +58,13 @@ var people = [
 	<div class="row">
 		<table class="table table-striped table-condensed table-hover">
 		  <tr>
+		  	<th>num</th>
 		  	<th>name</th>
 		  	<th>word</th>
 		  </tr>
 
 		  <tr ng-repeat="person in people | orderBy:orderBy">
+		  	<td>{{ person.num | currency }}</td>
 		  	<td>{{ person.name }}</td>
 		  	<td>{{ person.word }}</td>
 		  </tr>

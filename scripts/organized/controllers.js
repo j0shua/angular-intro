@@ -1,6 +1,5 @@
 angular.module('app')
-	.controller('DemoController', function(
-		$scope, PeopleService){
+	.controller('DemoController', function PeopleService($scope, PeopleService){
 
 		//$scope.people = PeopleService.getAll();
 

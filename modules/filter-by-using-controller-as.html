@@ -21,18 +21,19 @@ var people = [
 	{'name': 'tomas', 'word': 'tomas'},
 	{'name': 'ramiro', 'word': 'ramiro ramiro'},
 	{'name': 'julieta', 'word': 'julieta julieta'},
-	{'name': 'awesome', 'word': 'filter tester'}
+	{'name': 'awesome', 'word': 'filter tester'},
+	{'name': 'test test test', 'word': 'up'}
 ];
 </script>
 
 <script>
 	angular.module('app', [])
-	.controller('DemoController', function($scope){
-		$scope.people = people;
+	.controller('DemoController', function DemoController(){
+		this.people = people;
 
-		$scope.filterBy = '';
+		this.filterBy = '';
 
-		$scope.orderByOptions = [
+		this.orderByOptions = [
 			{ label: 'name', value: 'name'},
 			{ label: 'name DESC', value: '-name'},
 			{ label: 'word', value: 'word'},
@@ -42,14 +43,14 @@ var people = [
 </script>
 
 
-<div class="container" ng-controller="DemoController">
+<div class="container" ng-controller="DemoController as demo">
 	<div class="row">
 		<form class="form">
 			<div class="row">
 				<div class="form-group">
 		      		<label for="filterBy" class="col-sm-3 control-label">filter by</label>
 		      		<div class="col-lg-6">
-	      				<input type="search" ng-model="filterBy" />
+	      				<input type="search" ng-model="demo.filterBy" />
 		      		</div>
 		    	</div>
 	    	</div>
@@ -58,8 +59,8 @@ var people = [
 		      		<label for="order-by" class="col-sm-3 control-label">order by</label>
 		      		<div class="col-lg-6">
 	      				<select 
-	      					ng-model="orderBy" 
-	      					ng-options="option.value as option.label for option in orderByOptions">
+	      					ng-model="demo.orderBy" 
+	      					ng-options="option.value as option.label for option in demo.orderByOptions">
 							<option value=""> select a sort order</option>
 						</select>
 		      		</div>
@@ -75,7 +76,7 @@ var people = [
 		  	<th>word</th>
 		  </tr>
 
-		  <tr ng-repeat="person in people | filter:filterBy | orderBy:orderBy">
+		  <tr ng-repeat="person in demo.people | filter:demo.filterBy | orderBy:demo.orderBy">
 		  	<td>{{ person.name }}</td>
 		  	<td>{{ person.word }}</td>
 		  </tr>
