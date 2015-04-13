@@ -22,9 +22,9 @@ NOTE: Instructions may be out of order / not make sense in a section so read thr
 
 	- This involves creating view/controller/service to support the page.
 
-	- NOTE: To start you may want to just return static data out of your service but afterward you shoudl extract that out and create a backend for it (2 below).
+	- NOTE: To start you may want to just return static data out of your service but afterward you should extract that out and create a backend for it (task below).
 
-	- Add a input box above the table that to search the table; so it will filter enties that contain whatever is placed in the input.
+	- Add an input box above the table that to search the table; so it will filter enties that contain whatever is placed in the input.
 
 2. Create a simple express app with an endpoint '/advertisers' that you can query using $http from your service to return the data.
 	- NOTE: You can get the data by copying out of Bootstrapped data in the live app.
