@@ -1,4 +1,4 @@
-== Instructions ==
+# Instructions
 
 To get a better feel for 'real world' angular we're going to recreate some parts of the app we have now.
 
@@ -11,11 +11,11 @@ Advertisers is a subset of functionality that lives within our layout.
 
 NOTE: Instructions may be out of order / not make sense in a section so read through the whole section.
 
-== General layout ==
+### General layout
 1. create a page layout for the 'site' with some sort of "top level" navigation links
 2. clicking on links in this nav should take you to separate sub pages like a standard SPA (Single Page App) and the Browser back/forward buttons should all function normally.
 
-== Create Advertiser-list page ==
+### Create Advertiser-list page
 1. One of the links in the 'top level nav' should be 'advertisers'. Clicking on the link should send the user to a page with a list of advertisers in a table.
 
 	- Specifically: the link should show "advertisers" and clicking it should take the user to '/advertisers' which will be a list in a table of all the advertisers.
@@ -31,7 +31,7 @@ NOTE: Instructions may be out of order / not make sense in a section so read thr
 
 3. One of the links in the last column in the table should be "edit". Clicking this links should go to a new page 'advertisers/:id/edit' where :id represents the id of the entity in that row and upon navigating there it should display a form to edit that advertiser.
 
-== Edit Advertiser Page ==
+### Edit Advertiser Page
 1. Create route/controller/view necessary to support editing an individual advertiser.
 
 2. Add validation.
