@@ -37,7 +37,8 @@ NOTE: Instructions may be out of order / not make sense in a section so read thr
 2. Add validation.
 	- create at least one required field
 	- create at least one email field
-	- clicking save should NOT save unless the item is valid. To represent saving you can console.log to see that it is working. (Use $log service instead of console for logging).
+	- error messages should be shown below the input fields
+	- clicking save should NOT save unless the item is valid. (To represent saving you can console.log to see that it is working. Use the $log service instead of console for logging).
 
 
 
