@@ -24,7 +24,7 @@ NOTE: Instructions may be out of order / not make sense in a section so read thr
 
 	- NOTE: To start you may want to just return static data out of your service but afterward you should extract that out and create a backend for it (task below).
 
-	- Add an input box above the table that to search the table; so it will filter enties that contain whatever is placed in the input.
+	- Add an input box above the table that allows the user to search the table. Text in the search field should filter enties in the table to only show those that contain whatever is placed in the input.
 
 2. Create a simple express app with an endpoint '/advertisers' that you can query using $http from your service to return the data.
 	- NOTE: You can get the data by copying out of Bootstrapped data in the live app.
