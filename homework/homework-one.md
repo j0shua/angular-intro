@@ -13,12 +13,12 @@ NOTE: Instructions may be out of order / not make sense in a section so read thr
 
 ### General layout
 1. create a page layout for the 'site' with some sort of "top level" navigation links
-2. clicking on links in this nav should take you to separate sub pages like a standard SPA (Single Page App) and the Browser back/forward buttons should all function normally.
+2. clicking on links in this nav should take you to separate sub pages like a standard SPA (Single Page App) and the Browser's back/forward buttons should all function normally.
 
 ### Create Advertiser-list page
 1. One of the links in the 'top level nav' should be 'advertisers'. Clicking on the link should send the user to a page with a list of advertisers in a table.
 
-	- Specifically: the link should show "advertisers" and clicking it should take the user to '/advertisers' which will be a list in a table of all the advertisers.
+	- Specifically: the link should show the word "advertisers" and clicking it should take the user to '/advertisers' which will be a list in a table of all the advertisers.
 
 	- This involves creating view/controller/service to support the page.
 
