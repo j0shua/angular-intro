@@ -1,6 +1,6 @@
 # Instructions
 
-Angular Router has some pretty big limitations such as only allowing only one ng-view. For more flexible layouts there is a community module named ui-router that allow nested views in addition to other powerful features. So lets add some more functionality to our app while exploring ui-router.
+Angular Router has some pretty big limitations such as only allowing one ng-view. For more flexible layouts there is a community module named ui-router that allow nested views in addition to other powerful features. So lets add some more functionality to our app while exploring ui-router.
 
 ### General layout
 1. Continuing with your code from before, convert routes to instead use UI-Router's states.
