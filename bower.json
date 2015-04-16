@@ -1,0 +1,22 @@
+{
+  "name": "angular-training",
+  "version": "0.1.0",
+  "authors": [
+    "Santiago Rojo <santiago.rojo@graion.com>",
+    "Tomas Ferraro <tomas.ferraro@graion.com>"
+  ],
+  "description": "Small AngularJS training app.",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15",
+    "bootstrap": "~3.3.4"
+  }
+}
