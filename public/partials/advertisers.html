@@ -1,0 +1,25 @@
+<h1>{{ title }}</h1>
+<div class="row">
+  <div class="col-md-6">
+    <input type="text" class="form-control" ng-model="search" placeholder="Search...">
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Managed by</th>
+        <th>Created on</th>
+        <th>Edit</th>
+      </tr>
+      <tr ng-repeat="advertiser in advertisers | filter:search" >
+        <td>{{ advertiser.name }}</td>
+        <td>{{ advertiser.managedBy }}</td>
+        <td>{{ advertiser.createdOn | date:'short' }}</td>
+        <td><a ng-href="#/advertiser/{{advertiser.id}}/edit"/>Edit</a> </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -5,7 +5,7 @@
     function AdvertiserService($http, $q) {
 
       function getAll() {
-        var url = 'http://localhost:8081/advertisers',
+        var url = '/advertisers',
           defer = $q.defer();
 
         $http.get(url)

@@ -15,10 +15,10 @@ app.get('/advertisers/:id', function (req, res) {
 
   getAdvertisers(function (advertisers) {
     var advertiser = advertisers.filter(function (advertiser) {
-      return advertiser.id == req.params.id;
-    });
+      return advertiser.id == id;
+    }).shift();
 
-    res.send(advertiser[0]);
+    res.send(advertiser);
   });
 });
 
@@ -29,7 +29,7 @@ var server = app.listen(8080, function () {
 
 /**
  * Read the advertisers file from the data folder.
- * @param  {Function} success Callback executed is the file was readed
+ * @param  {Function} success Callback executed is the file was fetched
  * successfully.
  */
 function getAdvertisers(success){
