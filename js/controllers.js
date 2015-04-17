@@ -1,8 +1,17 @@
 (function () {
   'use strict';
 
-  app.controller('AdvertisersController', ['$scope', function AdvertisersController($scope) {
-    $scope.title = 'Advertisers';
-  }]);
+  app.controller('AdvertisersController', ['$scope', 'AdvertiserService',
+    function AdvertisersController($scope, AdvertiserService) {
+
+      AdvertiserService.getAll()
+        .then(function (advertisers) {
+          $scope.advertisers = advertisers;
+        })
+        .catch(function (err) {
+          console.error(err);
+        });
+
+    }]);
 
 }());
