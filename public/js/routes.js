@@ -6,9 +6,9 @@
       .when('/', {
         templateUrl: '/partials/home.html'
       })
-      .when('/advertisers', {
-        templateUrl : '/partials/advertisers.html',
-        controller  : 'AdvertisersController'
+      .when('/advertiser', {
+        templateUrl : '/partials/advertiser_list.html',
+        controller  : 'AdvertiserController'
       })
       .otherwise({
         redirectTo: '/'

@@ -1,8 +1,8 @@
 (function () {
   'use strict';
 
-  app.controller('AdvertisersController', ['$scope', 'AdvertiserService',
-    function AdvertisersController($scope, AdvertiserService) {
+  app.controller('AdvertiserController', ['$scope', 'AdvertiserService',
+    function AdvertiserController($scope, AdvertiserService) {
 
       AdvertiserService.getAll()
         .then(function (advertisers) {
