@@ -12,8 +12,8 @@ describe("AdvertiserService", function() {
 		$httpBackend = $injector.get('$httpBackend');
 	}));
 
-	describe('get method', function() {
-		it('should make a request to /advertisers/ when get is called', function() {
+	describe('get', function() {
+		it('should make a request to /advertisers/ when called', function() {
 			//define the request we expect the service to make
 			$httpBackend.whenGET('/advertisers/someId').respond(mockData);
 
