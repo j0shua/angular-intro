@@ -5,11 +5,11 @@ describe("AdvertiserService", function() {
 
 	beforeEach(module('app'));
 
-	beforeEach(inject(function(_AdvertiserService_, $injector) {
+	beforeEach(inject(function(_AdvertiserService_, _$httpBackend_) {
 		//cache the service
 		AdvertiserService = _AdvertiserService_;
 		// Set up the mock http service responses
-		$httpBackend = $injector.get('$httpBackend');
+		$httpBackend = _$httpBackend_;
 	}));
 
 	describe('get', function() {

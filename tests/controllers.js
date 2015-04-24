@@ -27,7 +27,6 @@ describe('AdvertiserController', function() {
 		});
 	}));
 
-
 	describe('advertisers', function() {
 		it('uses the Advertiser service, to add a list of advertisers to scope', function() {
 
